@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>我的技术与生活——link | zcw</title>
+  <title>我的技术与生活——小站首页 | zcw</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="shortcut icon" href="/imgs/shortcut-icon.ico" type="image/x-icon">
   <link rel="stylesheet" href="/css/public.css" />
@@ -16,7 +16,7 @@
 
   <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
   <script>
-    document.title = `我的技术与生活——link`
+    document.title = `我的技术与生活——小站首页`
   </script>
 <meta name="generator" content="Hexo 6.3.0"></head>
 
@@ -347,17 +347,118 @@
       <div id="main-container" class="main-container">
 
 
-  <ul class="link">
-  
-    <li class="link-item">
-      <img src="https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg" alt="">
-      <div class="link-info">
-        <p>Hexo.</p>
-        <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">- TA的小站</a>
+  <style>
+pre::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+  background-color:#F5F5F5;
+}
+/*定义滚动条轨道
+内阴影+圆角*/
+pre::-webkit-scrollbar-track {
+  background-color:#F5F5F5;
+}
+/*定义滑块
+内阴影+圆角*/
+pre::-webkit-scrollbar-thumb {
+  background-color: rgb(69, 83, 100);
+}
+
+pre:active {
+  background-color: rgb(81, 95, 116);
+}
+</style>
+
+<div class="article-container">
+  <div class="article">
+    <h1 class="article-title"></h1>
+    <div class="article-info">
+      <div class="article-info--item">
+        <div class="article-info--info">
+          
+          
+          <p class="article-info--date">日期：2023-08-15 01:28:59</p>
+        </div>
+        <img src="/imgs/default-cover.webp" alt="" class="article-cover">
       </div>
-    </li>
-  
-</ul>
+    </div>
+    <article class="article-content">
+      <h1 id="1-Discuz-7-x-6-x-全局变量防御绕过导致代码执行"><a href="#1-Discuz-7-x-6-x-全局变量防御绕过导致代码执行" class="headerlink" title="1.#Discuz 7.x&#x2F;6.x 全局变量防御绕过导致代码执行"></a>1.#Discuz 7.x&#x2F;6.x 全局变量防御绕过导致代码执行</h1><p>漏洞复现-Discuz-命令执行</p>
+<p>（<strong>wooyun-2010-080723）</strong></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/cute-puli/p/13333991.html">漏洞复现-Discuz-命令执行（wooyun-2010-080723) - 铺哩 - 博客园</a></p>
+<p>首先进入访问页面，点击默认模块随意打开一个帖子在Burp进行抓包，在代理拦截里打开拦截，使用burp内置浏览器将http:&#x2F;&#x2F;[IP]:[Port]&#x2F;XXX贴进内置浏览器中，此时在代理的HTTP历史记录里可以看到记录，如下图所示。</p>
+<p>![Untitled](Discuz 7全局变量防御绕过导致代码执行.assets\image-20230814233803968.png)</p>
+<p>![image-20230814233820975](Discuz 7全局变量防御绕过导致代码执行.assets&#x2F;image-20230814233820975.png)</p>
+<p>拦截里操作选择发送到重放器进行cookies修改，修改后发送，在响应里看页面渲染状态进行判断。</p>
+<p>随后打开蚁剑进行连接。</p>
+<p>![image-20230814233838102](Discuz 7全局变量防御绕过导致代码执行.assets&#x2F;image-20230814233838102.png)</p>
+
+    </article>
+    
+    <div class="read-nums">
+      <!-- id 将作为查询条件 -->
+      <span id="log/Discuz 7全局变量防御绕过导致代码执行.html" class="leancloud_visitors" data-flag-title="Your Article Title">
+        <em class="post-meta-item-text">浏览量</em>
+        <i class="leancloud-visitors-count"></i>
+      </span>
+    </div>
+    <div class="comments-intro">
+      <h2>评论区</h2>
+      <p>欢迎你留下宝贵的意见，昵称输入QQ号会显示QQ头像哦~</p>
+    </div>
+    <div id="vcomments" class="vcomments"></div>
+    
+  </div>
+  <div class="article-catelogue">
+    <div class="article-catelogue--wrapper">
+      <div class="catelogue catelogue-1">
+        <h3>目录</h3>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Discuz-7-x-6-x-%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E9%98%B2%E5%BE%A1%E7%BB%95%E8%BF%87%E5%AF%BC%E8%87%B4%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C"><span class="toc-number">1.</span> <span class="toc-text">1.#Discuz 7.x&#x2F;6.x 全局变量防御绕过导致代码执行</span></a></li></ol>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<script src="http://cdn.yangxiang.cc/prism.js"></script>
+
+<script>
+  // var定义，避免pjax重新进来造成的重复声明错误
+  var config = JSON.parse('{"enable":true,"appId":"Pf8zCXGEH1qsprnWfikVVujL-gzGzoHsz","appKey":"qOqoiUHhH1TGtLRUYURkLRQX","placeholder":"请留下你宝贵的意见吧~","meta":["nick"],"recordIP":true,"visitor":true,"enableQQ":true}')
+  new Valine({
+    el: '#vcomments',
+    appId: config.appId,
+    appKey: config.appKey,
+    placeholder: config.placeholder,
+    meta: config.meta,
+    recordIP: config.recordIP,
+    visitor: config.visitor,
+    enableQQ: config.enableQQ,
+    path: 'log/Discuz 7全局变量防御绕过导致代码执行.html'
+  })
+</script>
+
+
+<script>
+  $(document).on('pjax:complete', function() {
+    const tocs = document.querySelector('.toc')
+    const links = tocs ? tocs.querySelectorAll('a') : []
+    links.forEach(link => {
+      link.addEventListener('click', e => {
+        const href = decodeURIComponent(e.href)
+        href.search(/#(.*)/)
+        const id = RegExp.$1
+        const target = document.querySelector('#' + id)
+        const top = target.offsetTop
+        document.documentElement.scrollTo({
+          top: top - 100,
+          behavior: 'smooth'
+        })
+        e.preventDefault()
+      })
+    })
+  })
+</script> 
 
 </div>
       <div class="main-right-wrapper"><div class="main-right">
